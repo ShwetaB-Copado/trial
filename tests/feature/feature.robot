@@ -4,6 +4,9 @@ Resource                        ../../resources/objects/feature_resource.robot
 #Suite Setup                     
 #Suite Teardown                  End Suite
 
+*** Variables ***
+${login_url}    https://login.salesforce.com/    
+
 *** Test Cases ***
 
 Setup Browser
