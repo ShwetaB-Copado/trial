@@ -5,6 +5,17 @@ Suite Setup                     Start Suite
 Suite Teardown                  End Suite
 
 *** Test Cases ***
+
+Setup Browser
+    # Setting search order is not really needed here, but given as an example
+    # if you need to use multiple libraries containing keywords with duplicate names
+    Set Library Search Order    QForce                      QWeb
+    Open Browser                about:blank                 chrome
+    SetConfig                   LineBreak                   ${EMPTY}          #\ue000
+    SetConfig                   DefaultTimeout              20s               #sometimes salesforce is slow
+Login 
+    GoTo                        ${login_url}
+
 Verify the required fields in New Feature window
     [Tags]                      Features
     [Documentation]             Author: Ashok K
