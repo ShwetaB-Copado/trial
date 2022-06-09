@@ -5,7 +5,7 @@ Resource                        ../../resources/objects/feature_resource.robot
 #Suite Teardown                  End Suite
 
 *** Variables ***
-${login_url}    https://login.salesforce.com/    
+${loginUrl}    https://login.salesforce.com/    
 
 *** Test Cases ***
 
@@ -26,7 +26,7 @@ Verify the required fields in New Feature window
     Open Browser                about:blank                 chrome
     SetConfig                   LineBreak                   ${EMPTY}          #\ue000
     SetConfig                   DefaultTimeout              20s               #sometimes salesforce is slow
-    GoTo                        ${login_url}
+    GoTo                        ${loginUrl}
 
     #Given
     Open Object                 Features
