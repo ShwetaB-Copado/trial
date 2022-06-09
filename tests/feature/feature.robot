@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation                   Test feature Object- Create, Edit, clone, Delete.
 Resource                        ../../resources/objects/feature_resource.robot
-Suite Setup                     Start Suite
-Suite Teardown                  End Suite
+#Suite Setup                     
+#Suite Teardown                  End Suite
 
 *** Test Cases ***
 
