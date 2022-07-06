@@ -21,12 +21,11 @@ Login
 
 Verify the required fields in New Feature window
     [Tags]                      Features
-    [Documentation]             Author: Ashok K
-    Set Library Search Order    QForce                      QWeb
-    Open Browser                about:blank                 chrome
-    SetConfig                   LineBreak                   ${EMPTY}          #\ue000
-    SetConfig                   DefaultTimeout              20s               #sometimes salesforce is slow
-    GoTo                        ${loginUrl}
+    #Set Library Search Order    QForce                      QWeb
+    #Open Browser                about:blank                 chrome
+    #SetConfig                   LineBreak                   ${EMPTY}          #\ue000
+    #SetConfig                   DefaultTimeout              20s               #sometimes salesforce is slow
+    #GoTo                        ${loginUrl}
 
     #Given
     Open Object                 Features
