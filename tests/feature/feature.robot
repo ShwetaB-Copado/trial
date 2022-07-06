@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation                   Test feature Object- Create, Edit, clone, Delete.
 Resource                        ../../resources/objects/feature_resource.robot
-#Suite Setup                     
+Suite Setup                     Start Suite
 #Suite Teardown                  End Suite
 
 *** Variables ***
-${loginUrl}    https://login.salesforce.com/    
+#${loginUrl}    https://login.salesforce.com/    
 
 *** Test Cases ***
 
