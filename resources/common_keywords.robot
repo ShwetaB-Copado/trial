@@ -37,8 +37,15 @@ Start Suite
 
     #Steps for test suite setup
     Open Browser                ${LOGIN_URL}                ${BROWSER}
-    TypeText                    Username                    ${ORG_USERNAME}
-    TypeSecret                  Password                    ${ORG_PASSWORD}
+    IF                        '${loginUrl}' != ''
+        Open Browser                ${loginUrl}                ${BROWSER}
+        TypeText                    Username                    ${ORG_USERNAME}
+        TypeSecret                  Password                    ${ORG_PASSWORD}
+    ELSE
+        Open Browser                ${LOGIN_URL}                ${BROWSER}
+        TypeText                    Username                    ${ORG_USERNAME}
+        TypeSecret                  Password                    ${ORG_PASSWORD}
+    END
     ClickText                   Log In
 
     #Switch to lightning if classic view opened and verify logged-in succesfully
