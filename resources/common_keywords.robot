@@ -36,7 +36,7 @@ Start Suite
     Evaluate                    random.seed()               random
 
     #Steps for test suite setup
-    Open Browser                ${LOGIN_URL}                ${BROWSER}
+    #Open Browser                ${LOGIN_URL}                ${BROWSER}
     IF                        '${loginUrl}' != ''
         Open Browser                ${loginUrl}                ${BROWSER}
         TypeText                    Username                    ${ORG_USERNAME}
