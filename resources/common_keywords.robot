@@ -39,14 +39,15 @@ Start Suite
     #Open Browser                ${LOGIN_URL}                ${BROWSER}
     IF                        '${loginUrl}' != ''
         Open Browser                ${loginUrl}                ${BROWSER}
-        TypeText                    Username                    ${ORG_USERNAME}
-        TypeSecret                  Password                    ${ORG_PASSWORD}
+        #TypeText                    Username                    ${ORG_USERNAME}
+        #TypeSecret                  Password                    ${ORG_PASSWORD}
     ELSE
         Open Browser                ${LOGIN_URL}                ${BROWSER}
         TypeText                    Username                    ${ORG_USERNAME}
         TypeSecret                  Password                    ${ORG_PASSWORD}
+        ClickText                   Log In
     END
-    ClickText                   Log In
+    
 
     #Switch to lightning if classic view opened and verify logged-in succesfully
     Switch To Lightning
