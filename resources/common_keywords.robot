@@ -37,8 +37,8 @@ Start Suite
 
     #Steps for test suite setup
     #Open Browser                ${LOGIN_URL}                ${BROWSER}
-    ${login_Url}=               Get Variable Value             ${loginUrl}   ${LOGIN_URL} 
-    IF                        '${login_Url}' != ''
+    ${login_Url}=               Get Variable Value             ${loginUrl}   default 
+    IF                        '${login_Url}' != 'default'
         Open Browser                ${loginUrl}                ${BROWSER}
         #TypeText                    Username                    ${ORG_USERNAME}
         #TypeSecret                  Password                    ${ORG_PASSWORD}
