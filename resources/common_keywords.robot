@@ -26,7 +26,7 @@ Start Suite
     #SearchMode- To get the blue box as visualization on the screen while element interaction
     #MultipleAnchors- Automation will not give an error if it finds multiple similar anchors, but tries to find/click the text as per anchor.
     #DefaultTimeout- Automation will try to perform an action until 25s, affecting all keywords
-    [Arguments]                 ${loginUrl}
+    #[Arguments]                 ${loginUrl}
     #Set libraries order
     Set Library Search Order    QWeb                        QForce
 
@@ -37,6 +37,7 @@ Start Suite
 
     #Steps for test suite setup
     #Open Browser                ${LOGIN_URL}                ${BROWSER}
+    ${loginUrl}=                 Set Variable If             '${loginUrl}' != ''
     IF                        '${loginUrl}' != ''
         Open Browser                ${loginUrl}                ${BROWSER}
         #TypeText                    Username                    ${ORG_USERNAME}
