@@ -39,7 +39,7 @@ Start Suite
     #Open Browser                ${LOGIN_URL}                ${BROWSER}
     ${login_Url}=               Get Variable Value          ${loginUrl}                 NoValuePassed    
     IF                        '${login_Url}' != 'NoValuePassed'
-        Open Browser                ${loginUrl}                ${BROWSER}
+        Open Browser                ${login_Url}                ${BROWSER}
         #TypeText                    Username                    ${ORG_USERNAME}
         #TypeSecret                  Password                    ${ORG_PASSWORD}
     ELSE
