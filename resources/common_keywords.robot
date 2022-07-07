@@ -37,7 +37,7 @@ Start Suite
 
     #Steps for test suite setup
     #Open Browser                ${LOGIN_URL}                ${BROWSER}
-    ${login_Url}=                 Set Variable If             '${loginUrl}' != ''
+    ${login_Url}=               Get Variable Value             ${loginUrl}   ${LOGIN_URL} 
     IF                        '${login_Url}' != ''
         Open Browser                ${loginUrl}                ${BROWSER}
         #TypeText                    Username                    ${ORG_USERNAME}
