@@ -36,12 +36,11 @@ Start Suite
     Evaluate                    random.seed()               random
 
     #Steps for test suite setup
-    #Open Browser                ${LOGIN_URL}                ${BROWSER}
-    ${login_Url1}=               Get Variable Value          ${loginUrl}                 NoValuePassed    
-    IF                        '${login_Url1}' != 'NoValuePassed'
-        Open Browser                ${login_Url1}                ${BROWSER}
+    ${DYNAMIC_LOGIN}=               Get Variable Value          ${loginUrl}                 NoValuePassed    
+    IF                        '${DYNAMIC_LOGIN}' != 'NoValuePassed'
+        Open Browser                ${DYNAMIC_LOGIN}                ${BROWSER}
     ELSE
-        Open Browser                ${LOGIN_URL2}                ${BROWSER}
+        Open Browser                ${LOCAL_LOGIN_URL}                ${BROWSER}
         TypeText                    Username                    ${ORG_USERNAME}
         TypeSecret                  Password                    ${ORG_PASSWORD}
         ClickText                   Log In
