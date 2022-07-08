@@ -3,7 +3,7 @@ Documentation               Contains all global variables required for the autom
 
 *** Variables ***
 ${BROWSER}                  chrome
-${LOGIN_URL2}                https://login.salesforce.com/
+${LOCAL_LOGIN_URL}                https://login.salesforce.com/
 ${GIT_REPO}                 CopadoAutomationGIT
 ${PIPELINE}                 CopadoAutomationPipeline
 ${PROJECT}                  CopadoAutomationProject
