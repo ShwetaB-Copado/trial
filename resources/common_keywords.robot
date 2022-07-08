@@ -41,7 +41,7 @@ Start Suite
     IF                        '${login_Url1}' != 'NoValuePassed'
         Open Browser                ${login_Url1}                ${BROWSER}
     ELSE
-        Open Browser                ${LOGIN_URL}                ${BROWSER}
+        Open Browser                ${LOGIN_URL2}                ${BROWSER}
         TypeText                    Username                    ${ORG_USERNAME}
         TypeSecret                  Password                    ${ORG_PASSWORD}
         ClickText                   Log In
