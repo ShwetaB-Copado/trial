@@ -36,7 +36,6 @@ Verify the required fields in New Feature window
 
 Update,Clone,Delete Feature by Creating new
     [Tags]                      Features
-    [Documentation]             Author: Ashok K
 
     #Given
     Open Object                 Features
