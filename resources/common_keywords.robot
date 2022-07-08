@@ -37,7 +37,7 @@ Start Suite
 
     #Steps for test suite setup
     #Open Browser                ${LOGIN_URL}                ${BROWSER}
-    ${login_Url1}=               Get Variable Value          ${loginUrl}                 NoValuePassed    
+    ${login_Url1}=               Get Variable Value          ${loginUrl}                 'NoValuePassed'    
     IF                        '${login_Url1}' != 'NoValuePassed'
         Open Browser                ${login_Url1}                ${BROWSER}
     ELSE
